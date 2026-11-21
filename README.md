@@ -1,2 +1,4 @@
 # zenith-releases
-Instaladores e atualizações do Zenith (só binários, latest.json e .sig)
+
+Installers and auto-update files for Zenith (binaries, latest.json and .sig only).
+Source code lives in a private repository.
