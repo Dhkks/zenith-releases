@@ -8,14 +8,14 @@ O instalador mais recente está na [página de Releases](https://github.com/Dhkk
 
 | Plataforma | Arquitetura | Arquivo |
 |------------|-------------|---------|
-| Windows 10/11 | x64 | `Zenith_X.Y.Z_x64-setup.exe` |
-| macOS (Apple Silicon: M1 ou mais novo) | arm64 | `Zenith_X.Y.Z_aarch64.dmg` |
+| Windows 10/11 | x64 | `zenith_X.Y.Z_x64-setup.exe` |
+| macOS (Apple Silicon: M1 ou mais novo) | arm64 | `zenith_X.Y.Z_aarch64.dmg` |
 
 ## Instalação (Windows)
 
 O instalador ainda **não tem assinatura de código** (sem certificado Authenticode). Na primeira vez:
 
-1. Baixe o `Zenith_X.Y.Z_x64-setup.exe` da última release.
+1. Baixe o `zenith_X.Y.Z_x64-setup.exe` da última release.
 2. Abra o arquivo. Se o SmartScreen avisar, clique em **Mais informações** → **Executar assim mesmo**.
 3. O instalador roda sozinho e abre o zenith no fim.
 
@@ -23,13 +23,13 @@ O instalador ainda **não tem assinatura de código** (sem certificado Authentic
 
 O app ainda **não tem assinatura da Apple** (sem Developer ID). Na primeira vez:
 
-1. Baixe o `Zenith_X.Y.Z_aarch64.dmg` da última release.
+1. Baixe o `zenith_X.Y.Z_aarch64.dmg` da última release.
 2. Abra o `.dmg` e arraste o **zenith** para a pasta **Aplicativos**.
 3. Em **Aplicativos**, clique com o botão direito no zenith → **Abrir** → **Abrir**.
 4. Se o macOS disser que o app está "danificado", rode no Terminal e abra de novo:
 
    ```bash
-   xattr -cr /Applications/Zenith.app
+   xattr -cr /Applications/zenith.app
    ```
 
 Macs com processador Intel não são suportados.
@@ -40,11 +40,11 @@ Ao abrir, o zenith verifica se há versão nova. Quando há, ele pergunta se pod
 
 Arquivos de cada release:
 
-- `Zenith_X.Y.Z_x64-setup.exe` — instalador do Windows.
-- `Zenith_X.Y.Z_x64-setup.exe.sig` — assinatura da atualização do Windows.
-- `Zenith_X.Y.Z_aarch64.dmg` — instalador do macOS.
-- `Zenith_X.Y.Z_aarch64.app.tar.gz` — atualização do macOS.
-- `Zenith_X.Y.Z_aarch64.app.tar.gz.sig` — assinatura da atualização do macOS.
+- `zenith_X.Y.Z_x64-setup.exe` — instalador do Windows.
+- `zenith_X.Y.Z_x64-setup.exe.sig` — assinatura da atualização do Windows.
+- `zenith_X.Y.Z_aarch64.dmg` — instalador do macOS.
+- `zenith_X.Y.Z_aarch64.app.tar.gz` — atualização do macOS.
+- `zenith_X.Y.Z_aarch64.app.tar.gz.sig` — assinatura da atualização do macOS.
 - `latest.json` — manifesto que o app lê para achar a versão nova.
 
 ## Código-fonte
