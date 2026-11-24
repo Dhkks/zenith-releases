@@ -9,6 +9,7 @@ O instalador mais recente está na [página de Releases](https://github.com/Dhkk
 | Plataforma | Arquitetura | Arquivo |
 |------------|-------------|---------|
 | Windows 10/11 | x64 | `Zenith_X.Y.Z_x64-setup.exe` |
+| macOS (Apple Silicon: M1 ou mais novo) | arm64 | `Zenith_X.Y.Z_aarch64.dmg` |
 
 ## Instalação (Windows)
 
@@ -18,14 +19,32 @@ O instalador ainda **não tem assinatura de código** (sem certificado Authentic
 2. Abra o arquivo. Se o SmartScreen avisar, clique em **Mais informações** → **Executar assim mesmo**.
 3. O instalador roda sozinho e abre o Zenith no fim.
 
+## Instalação (macOS)
+
+O app ainda **não tem assinatura da Apple** (sem Developer ID). Na primeira vez:
+
+1. Baixe o `Zenith_X.Y.Z_aarch64.dmg` da última release.
+2. Abra o `.dmg` e arraste o **Zenith** para a pasta **Aplicativos**.
+3. Em **Aplicativos**, clique com o botão direito no Zenith → **Abrir** → **Abrir**.
+4. Se o macOS disser que o app está "danificado", rode no Terminal e abra de novo:
+
+   ```bash
+   xattr -cr /Applications/Zenith.app
+   ```
+
+Macs com processador Intel não são suportados.
+
 ## Atualização automática
 
 Ao abrir, o Zenith verifica se há versão nova. Quando há, ele pergunta se pode instalar; ao aceitar, o app fecha, atualiza e reabre. As atualizações são assinadas e verificadas pelo app antes de instalar.
 
 Arquivos de cada release:
 
-- `Zenith_X.Y.Z_x64-setup.exe` — instalador.
-- `Zenith_X.Y.Z_x64-setup.exe.sig` — assinatura da atualização.
+- `Zenith_X.Y.Z_x64-setup.exe` — instalador do Windows.
+- `Zenith_X.Y.Z_x64-setup.exe.sig` — assinatura da atualização do Windows.
+- `Zenith_X.Y.Z_aarch64.dmg` — instalador do macOS.
+- `Zenith_X.Y.Z_aarch64.app.tar.gz` — atualização do macOS.
+- `Zenith_X.Y.Z_aarch64.app.tar.gz.sig` — assinatura da atualização do macOS.
 - `latest.json` — manifesto que o app lê para achar a versão nova.
 
 ## Código-fonte
